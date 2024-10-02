@@ -79,4 +79,4 @@ jobs:
       steps:
         - name: Executa scripts externos (à fim de enviar e-mail de congratulação)
           uses: actions/checkout@v4
-        - run: sh scripts/shell.sh
+        - run: bash scripts/shell.sh
