@@ -29,7 +29,8 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install pytest
         python -m pip install pytest-html
-        pytest --html=pytest_report.html
+        cd src
+        python -m pytest --html=pytest_report.html
 
     - name: Upload artefatos
       uses: actions/upload-artifact@v3
