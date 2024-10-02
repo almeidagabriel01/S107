@@ -75,6 +75,8 @@ jobs:
       needs: [build, test]
 
       runs-on: ubuntu-latest
+      env:
+        EMAIL_ADDRESS: ${{secrets.EMAIL_ADDRESS}}
 
       steps:
         - name: Executa scripts externos (à fim de enviar e-mail de congratulação)
