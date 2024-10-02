@@ -1,0 +1,2 @@
+sudo apt-get install mailutils
+echo "Atualização Código S107" | mail -s "prezado, boa noite! Apenas passando para lhe informar que existe uma nova versão do código de S107 do Vitor e Gabriel. Att, Chris" ${{ secrets.EMAIL_ADDRESS }}
