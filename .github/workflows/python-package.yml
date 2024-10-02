@@ -39,7 +39,6 @@ jobs:
   build:
 
     runs-on: windows-latest
-    needs: test
     strategy:
       fail-fast: false
       matrix:
@@ -73,11 +72,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
   
   notification:
-      needs: build
+      needs: [build, test]
 
       runs-on: ubuntu-latest
-      env:
-        EMAIL_ADDRESS: ${{secrets.EMAIL_ADDRESS}}
 
       steps:
         - name: Executa scripts externos (à fim de enviar e-mail de congratulação)
