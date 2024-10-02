@@ -76,9 +76,10 @@ jobs:
       needs: build
 
       runs-on: ubuntu-latest
+      env:
+        EMAIL_ADDRESS: ${{secrets.EMAIL_ADDRESS}}
+
       steps:
         - name: Executa scripts externos (à fim de enviar e-mail de congratulação)
-          env:
-            super_secrets: ${{secrets.EMAIL_ADDRESS}}
           uses: actions/checkout@v4
         - run: sh scripts/shell.sh
