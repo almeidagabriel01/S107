@@ -1,5 +1,5 @@
 from src.main.HorarioService import HorarioService
-from src.Test.HorariosJsons import HorariosJsons
+from src.test.HorariosJsons import HorariosJsons
 
 class MockHorarioService(HorarioService):
     def __init__(self):

@@ -2,7 +2,7 @@ from math import ceil
 
 import pytest
 from src.main.buscaHorario import buscaHorario
-from src.Test.MockHorarioService import MockHorarioService
+from src.test.MockHorarioService import MockHorarioService
 
 
 # Mockando o serviço
