@@ -78,5 +78,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Executa scripts externos (à fim de enviar e-mail de congratulação)
+          env:
+            super_secrets: ${{secrets.EMAIL_ADDRESS}}
           uses: actions/checkout@v4
-        - run: bash scripts/shell.sh
+        - run: sh scripts/shell.sh
