@@ -30,7 +30,7 @@ jobs:
         cd src
         python -m pytest --html=pytest_report.html
 
-    - name: Upload artefatos
+    - name: Upload artefats
       uses: actions/upload-artifact@v3
       with:
         name: Report
@@ -59,7 +59,7 @@ jobs:
         cd src/test
         python -m PyInstaller "test_buscaHorario.py"
 
-    - name: Upload artefatos
+    - name: Upload artefats
       uses: actions/upload-artifact@v3
       with:
         name: Pacote
